@@ -1,5 +1,3 @@
-require "enumerator"
-
 class Rover
   attr_accessor :x, :y, :orientation
 

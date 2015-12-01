@@ -7,18 +7,22 @@ class TestApp < Minitest::Test
   end
 
   def test_left
-    assert_equal "1 2 W", @mars_rover.run(["5 5", "1 2 N", "L"])
+    assert_equal ["1 2 W"], @mars_rover.run(["5 5", "1 2 N", "L"])
   end
 
   def test_right
-    assert_equal "1 2 E", @mars_rover.run(["5 5", "1 2 N", "R"])
+    assert_equal ["1 2 E"], @mars_rover.run(["5 5", "1 2 N", "R"])
   end
 
   def test_move
-    assert_equal "1 3 N", @mars_rover.run(["5 5", "1 2 N", "M"])
+    assert_equal ["1 3 N"], @mars_rover.run(["5 5", "1 2 N", "M"])
   end
 
   def test_example_first_rover
-    assert_equal "1 3 N", @mars_rover.run(["5 5", "1 2 N", "LMLMLMLMM"])
+    assert_equal ["1 3 N"], @mars_rover.run(["5 5", "1 2 N", "LMLMLMLMM"])
+  end
+
+  def test_full_example
+    assert_equal ["1 3 N", "5 1 E"], @mars_rover.run(["5 5", "1 2 N", "LMLMLMLMM", "3 3 E", "MMRMMRMRRM"])
   end
 end
