@@ -1,3 +1,5 @@
+require "enumerator"
+
 class Rover
   attr_accessor :x, :y, :orientation
 
@@ -12,10 +14,12 @@ class Rover
   end
 
   def navigate(instructions)
-    case instructions
-    when "L" then turn_left
-    when "R" then turn_right
-    when "M" then move_forward
+    instructions.each do |command|
+      case command
+      when "L" then turn_left
+      when "R" then turn_right
+      when "M" then move_forward
+      end
     end
   end
 

@@ -5,7 +5,7 @@ class MarsRover
     position = input[1].to_s.split
     rover = Rover.new(position)
 
-    instructions = input[2]
+    instructions = input[2].to_s.split(//)
     rover.navigate(instructions)
 
     rover.position

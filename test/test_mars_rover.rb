@@ -17,4 +17,8 @@ class TestApp < Minitest::Test
   def test_move
     assert_equal "1 3 N", @mars_rover.run(["5 5", "1 2 N", "M"])
   end
+
+  def test_example_first_rover
+    assert_equal "1 3 N", @mars_rover.run(["5 5", "1 2 N", "LMLMLMLMM"])
+  end
 end
