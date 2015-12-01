@@ -52,7 +52,7 @@ This app was developed using [Ruby 2.2.3](https://www.ruby-lang.org/)
 
 You also need [Bundler](http://bundler.io/) for dependency management. Remember to run `bundle install`
 
-To run the application use `ruby lib/mars_rover.rb [Input]`
+To run the application use `ruby lib/mars_rover.rb [Input]`. For example: `ruby lib/mars_rover.rb "5 5" "1 2 N" "LMLMLMLMM"`
 
 To run all tests use `bundle exec rake test`
 
