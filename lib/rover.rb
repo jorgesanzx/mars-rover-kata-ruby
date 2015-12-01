@@ -1,10 +1,8 @@
 class Rover
-  attr_accessor :x, :y, :orientation
-
-  def initialize(position, plateau)
-    @x = position[0].to_i
-    @y = position[1].to_i
-    @orientation = position[2]
+  def initialize(x, y, orientation, plateau)
+    @x = x
+    @y = y
+    @orientation = orientation
     @plateau = plateau
   end
 
